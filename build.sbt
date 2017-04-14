@@ -1,12 +1,10 @@
-import play.PlayImport.PlayKeys.playRunHooks
-
 name := """play-react-webpack"""
 
 version := "1.0-SNAPSHOT"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
-scalaVersion := "2.11.6"
+scalaVersion := "2.11.8"
 
 libraryDependencies ++= Seq(
   jdbc,
@@ -16,7 +14,8 @@ libraryDependencies ++= Seq(
   "com.codeborne" % "phantomjsdriver" % "1.2.1"
 )
 
-playRunHooks <+= baseDirectory.map(Webpack.apply)
+PlayKeys.playRunHooks <+= baseDirectory.map(Webpack(_))
+//baseDirectory.map(Webpack.apply)
 
 routesGenerator := InjectedRoutesGenerator
 
