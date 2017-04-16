@@ -27,6 +27,7 @@
   "dependencies": {
     "react": "^0.14.5",
     "react-dom": "^0.14.5"
+
   },
   "devDependencies": {
     "babel-core": "^6.4.0",
@@ -42,6 +43,10 @@
     "node-sass": "^3.13.1",
     "sass-loader": "^3.2.3",
     "style-loader": "^0.13.2",
-    "webpack": "^1.12.10"
+    "webpack": "^1.12.10",
+    "react-data-grid":"2.0.1",
+    "jquery":"3.2.1"
+
+
   }
 }

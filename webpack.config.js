@@ -12,7 +12,9 @@ var config = {
         //, common: ['react-dom', 'react']
     },
     resolve: {
-        alias: {},
+        alias: {
+            rdg:"react-data-grid/dist/react-data-grid.js"
+        },
         // root: srcPath,
         extensions: ['.js'],
         modules: ['node_modules', jsPath]
@@ -31,6 +33,7 @@ var config = {
                 exclude: /node_modules/,
                 loader: 'babel-loader'
             },
+            { test: /\.css$/, loader: 'style-loader!css-loader' },
             {
                 test: /\.scss$/,
                 include: /\/app\/assets/,
